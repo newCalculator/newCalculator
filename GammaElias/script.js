@@ -105,6 +105,7 @@ function encode(str) {
     let splitted_str = str.split('');
     let add_spl_str = "";
     let add_nums = [];
+    let pointer = 0;
     for (let i = 0; i < splitted_str.length; i++) {
         add_nums[i] = splitted_str[i].charCodeAt(0);
     }
@@ -116,6 +117,16 @@ function encode(str) {
     logs_block.innerHTML += `<p style="margin-bottom:-10px">${add_spl_str}</p>`;
     splitted_str = parseInt(splitted_str, 16).toString(2);
     logs_block.innerHTML += `<p style="margin-bottom:-10px">${splitted_str}</p>`;
+    if (splitted_str.charAt(0) == '1') {
+        pointer = 1;
+    } else {
+        pointer = 0;
+    }
+    for (let i = 0; i < add_nums.length; i++) {
+        add_spl_str += add_nums[i].toString(16).toUpperCase() + " ";
+        splitted_str += add_nums[i].toString(16).toUpperCase();
+    }
+    
 }
 
 //events
