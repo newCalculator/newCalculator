@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Хемминг</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="../index.html">Назад</a>
+    <div class="box_container">
+        <p style="margin-top:20px;">[Хемминг (15 цифр)] С ошибками (или нет):</p>
+        <div class="input_holder"><input id="input_ham" type="text" placeholder="Пример: 100110100111001" value=""> <button id="input_ham_btn">Расчёт</button></div>
+        <p style="margin-bottom:20px;">[Хемминг] Без ошибок:</p>
+        <div class="input_holder"><input id="output_ham" type="text" placeholder="Пример: 100110110111001" value=""></div>
+    </div>
+    <table style="width:60%; margin-top:50px;">
+        <tr style="background-color:rgb(30, 30, 30);" id="table_nums">
+          <th style="background-color:rgb(13, 71, 27);">0</th>
+          <th style="background-color:rgb(13, 71, 27);">0</th>
+          <th>0</th>
+          <th style="background-color:rgb(13, 71, 27);">0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+          <th style="background-color:rgb(13, 71, 27);">0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+          <th>0</th>
+        </tr>
+    </table>
+    <table style="width:60%; margin-top:5px;">
+        <tr">
+          <th style="background-color:rgb(105, 26, 26);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+          <th></th>
+          <th style="background-color:rgb(129, 48, 48);">1</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th style="background-color:rgb(105, 26, 26);">2</th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+          <th></th>
+          <th></th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+          <th></th>
+          <th></th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+          <th></th>
+          <th></th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+          <th style="background-color:rgb(29, 85, 17);">2</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th style="background-color:rgb(105, 26, 26);">4</th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+          <th style="background-color:rgb(12, 46, 78);">4</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th style="background-color:rgb(105, 26, 26);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+          <th style="background-color:rgb(71, 48, 11);">8</th>
+        </tr>
+      </table>
+    <div id="logs_block">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
