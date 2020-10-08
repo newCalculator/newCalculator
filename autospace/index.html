@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Хемминг</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <a href="../index.html">Назад</a>
+    <div class="box_container">
+        <p style="margin-top:20px;">[Текст] С пробелами (или нет):</p>
+        <div class="input_holder"><input id="space_input" type="text" placeholder="Пример: 1001100100 100110 0110 101000100010" value=""> <button id="space_input_btn">Расчёт</button></div>
+        <p style="margin-bottom:20px;">[Текст] Пробел через 4:</p>
+        <div class="input_holder"><input id="space_4" type="text" placeholder="Пример: 1001 1001 0010 0110 0110 1010 0010 0010" value=""></div>
+        <p style="margin-bottom:20px;">[Текст] Пробел через 6:</p>
+        <div class="input_holder"><input id="space_6" type="text" placeholder="Пример: 100110 010010 011001 101010 001000 10" value=""></div>
+        <p style="margin-bottom:20px;">[Текст] Пробел через 8:</p>
+        <div class="input_holder"><input id="space_8" type="text" placeholder="Пример: 10011001 00100110 01101010 00100010" value=""></div>
+        <p style="margin-bottom:20px;">[Текст] Пробел через 11:</p>
+        <div class="input_holder"><input id="space_11" type="text" placeholder="Пример: 10011001001 00110011010 1000100010" value=""></div>
+        <p style="margin-bottom:20px;">[Текст] Пробел через 15:</p>
+        <div class="input_holder"><input id="space_15" type="text" placeholder="Пример: 100110010010011 001101010001000 10" value=""></div>
+    </div>
+    <div id="logs_block">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
