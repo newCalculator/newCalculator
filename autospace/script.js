@@ -1,4 +1,5 @@
 let space_input = document.querySelector("#space_input");
+let space_0 = document.querySelector("#space_0");
 let space_4 = document.querySelector("#space_4");
 let space_6 = document.querySelector("#space_6");
 let space_8 = document.querySelector("#space_8");
@@ -31,6 +32,7 @@ function spacer(str) {
     for (let i = 0; i < splitted_str.length; i++) {
         full_string += splitted_str[i];
     }
+    space_0.value = full_string;
     for (let i = 0; i < splitString(full_string, 4).length; i++) {
         space_4.value += splitString(full_string, 4)[i] + " ";
     }
