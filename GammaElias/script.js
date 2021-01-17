@@ -21,7 +21,6 @@ function decode(str) {
     let first_index = 0;
     let was_zero = false;
     let splitted_str = "";
-    logs_block.innerHTML += `<p style="margin-bottom:-10px">${pointer + ":" + str}</p>`;
     for (let i = 0; i < str.length; i++) {
         if (str.charAt(i) == 1 && !was_zero) {
             splitted_str += str.slice(i, i + 1) + " ";
@@ -79,14 +78,20 @@ function decode(str) {
     for (let i = 0; i < bin_nums.length; i++) {
         splitted_str += bin_nums[i];
     }
-    logs_block.innerHTML += `<p style="margin-bottom:-10px">${splitted_str}</p>`;
-    let hex_nums = parseInt(splitted_str, 2).toString(16).toUpperCase();
+    logs_block.innerHTML += '<br>';
+    let letters__bin = splitString(splitted_str, 8);
+    let hex_nums = "";
+    logs_block.innerHTML += '<p style="margin-bottom:-10px">';
+    for (let i = 0; i < letters__bin.length; i++) {
+        hex_nums += parseInt(letters__bin[i], 2).toString(16).toUpperCase();
+        logs_block.innerHTML += letters__bin[i] + " ";
+    }
+    logs_block.innerHTML += '</p>';
     hex_nums = splitString(hex_nums, 2);
     splitted_str = "";
     for (let i = 0; i < hex_nums.length; i++) {
         splitted_str += hex_nums[i] + " ";
     }
-    logs_block.innerHTML += `<p style="margin-bottom:-10px">${splitted_str}</p>`;
     splitted_str = "";
     for (let i = 0; i < hex_nums.length; i++) {
         if (parseInt(hex_nums[i], 16) > 191) {
