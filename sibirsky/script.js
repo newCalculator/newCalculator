@@ -14,6 +14,14 @@ function splitString(string, size) {
     return string.match(re);
 }
 
+function numberSum(num) {
+    let sum = 0;
+    for (let i = 1; i <= num; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
 //gElias
 function decode(str) {
     
@@ -23,7 +31,48 @@ function decode(str) {
 // console.log(String.fromCharCode(174));
 
 function encode(str) {
+    let char_arr = "";
 
+    for (let i = 1; i <= str.length; i += 2) {
+        if (str.charAt(numberSum(i) - 1) != '') {
+            char_arr += str.charAt(numberSum(i) - 1);
+        }
+        if (str.charAt(numberSum(i)) != '') {
+            char_arr += str.charAt(numberSum(i));
+        }
+    }
+
+    let max = char_arr.length;
+
+    let offset = 0;
+
+    let isDone = false;
+
+    while (!isDone) {
+        for (let i = 0; i < max / 2; i++) {
+            isDone = false;
+            let l = numberSum(i * 2 + 1) + 1 + offset;
+            let r = numberSum(i * 2 + 3) - 2 - offset;
+            if (l < r) {
+                if (l < str.length) {
+                    char_arr += str.charAt(l);
+                }
+                if (r < str.length) {
+                    char_arr += str.charAt(r);
+                }
+            } else if (l == r) {
+                if (l < str.length) {
+                    char_arr += str.charAt(l);
+                }
+                isDone = true;
+            } else {
+                isDone = true;
+            }
+        }
+        offset++;
+    }
+
+    base64_input.value = char_arr;
 }
 
 //events
