@@ -60,7 +60,7 @@ a {
     text-decoration:none;
 }
 a:hover {
-    color:rgb(211, 211, 211);
+    color:rgb(211, 211, 211) !important;
 }
 a:hover span {
     color:rgb(211, 211, 211) !important;
@@ -72,5 +72,5 @@ a:visited {
     color:rgb(59, 59, 59);
 }
 a:visited:hover {
-    color:rgb(211, 211, 211);
+    color:rgb(211, 211, 211) !important;
 }
