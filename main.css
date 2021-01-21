@@ -44,6 +44,7 @@ body {
     background-repeat:no-repeat, no-repeat;
     background-position:300% 140%, -220% 40%;
     background-size:200px, 200px;
+    color:rgb(59, 59, 59);
 }
 .card:hover {
     background-color:rgb(44, 44, 44);
@@ -51,6 +52,7 @@ body {
     top:-10px;
     background-position:100% 100%, 50% 80%;
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.3);
+    color:rgb(211, 211, 211);
 }
 span {
     transition:color, 0.4s;
@@ -59,18 +61,15 @@ a {
     color:rgb(59, 59, 59);
     text-decoration:none;
 }
-a:hover {
-    color:rgb(211, 211, 211) !important;
-}
-a:hover span {
-    color:rgb(211, 211, 211) !important;
+a:visited {
+    color: inherit;
 }
 a:active {
     color:rgb(211, 211, 211);
 }
-a:visited {
-    color:rgb(59, 59, 59);
+a:hover {
+    color:rgb(211, 211, 211) !important;
 }
-a:visited:hover {
+a:hover span {
     color:rgb(211, 211, 211) !important;
 }
