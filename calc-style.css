@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
+.preload * {
+    transition: none !important;
+}
+html {
+    height:100%;
+}
+body {
+    margin:10px;
+    min-height:90%;
+    background-color:white;
+    color:rgb(43, 43, 43);
+    font-family: Consolas;
+    font-size:24px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+.box_container {
+    width:80%;
+    padding:10px;
+    margin-bottom:50px;
+    height:auto;
+    border-radius:20px;
+}
+.input_holder {
+    margin-top:10px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+input {
+    background-color:white;
+    color:rgb(43, 43, 43);
+    width:94%;
+    height:30px;
+    font-size:20px;
+    border-radius:5px;
+    border:solid 1px rgb(212, 212, 212);
+    padding-left:6px;
+    padding-right:6px;
+    outline:none;
+}
+button {
+    height:40px;
+    width:40px;
+    margin-top:-4px;
+    margin-left:8px;
+    margin-right:0.4%;
+    border-radius:100%;
+    font-size:0px;
+    outline:none;
+    background-color:white;
+    border:none;
+    color:white;
+    padding-right:11px;
+    transition-property:background-color;
+    transition-duration:0.2s;
+}
+button:hover {
+    background-color:rgb(43, 43, 43);
+    color:white;
+}
+button:hover .arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 6px 6px 0;
+    transform: rotate(-90deg);
+    right:-2px;
+}
+button:active {
+    background-color:rgb(43, 43, 43);
+    color:white;
+}
+button:active .arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 6px 6px 0;
+}
+#logs_block {
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+a {
+    position:absolute;
+    left:10px;
+    top:10px;
+    color:rgb(43, 43, 43);
+    text-decoration:none;
+}
+a:hover {
+    color:rgb(43, 43, 43);
+    text-decoration:underline;
+}
+a:active {
+    color:rgb(43, 43, 43);
+}
+a:visited {
+    color:rgb(43, 43, 43);
+}
+
+.arrow {
+    transition-property:border, transform, right;
+    transition-duration:0.2s;
+    position: relative;
+    right:0px;
+    border: solid rgb(65, 65, 65);
+    width:6px;
+    height:6px;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+#space_range {
+    width:30px;
+    height:25px;
+    
+}
+#space_range::-webkit-inner-spin-button {
+    appearance: none;
+  }

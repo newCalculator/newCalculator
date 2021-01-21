@@ -22,9 +22,27 @@ function numberSum(num) {
     return sum;
 }
 
-//gElias
 function decode(str) {
-    
+    let blocks = str.split('|');
+    let answer = "";
+    let start_element = 2;
+    for (let k = 0; k < blocks[0].length / 2; k++) {
+        answer += blocks[0].substring(0, 2);
+        blocks[0] = blocks[0].substring(2);
+        for (let i = 0; i < start_element; i++) {
+            answer += blocks[i + 1].charAt(0);
+            blocks[i + 1] = blocks[i + 1].substring(1);
+        }
+        for (let i = start_element - 1; i > 0; i--) {
+            answer += blocks[i].charAt(0);
+            blocks[i] = blocks[i].substring(1);
+        }
+        start_element += 2;
+    }
+
+    answer += blocks[0].substring(0, 2);
+
+    base64_output.value = answer;
 }
 
 // console.log(" ".charCodeAt(0));
@@ -72,16 +90,26 @@ function encode(str) {
         offset++;
     }
 
-    base64_input.value = char_arr;
+    let answer = "";
+
+    for (let i = 0; i < splitString(char_arr, 4).length; i++) {
+        answer += splitString(char_arr, 4)[i] + " ";
+    }
+
+    base64_input.value = answer;
 }
 
 //events
 base64_input_btn.addEventListener('click', function () {
     logs_block.innerHTML = "";
-    decode(base64_input.value);
-
+    if (base64_input.value != '') {
+        
+        decode(base64_input.value);
+    }
 })
 base64_output_btn.addEventListener('click', function () {
     logs_block.innerHTML = "";
-    encode(base64_output.value);
+    if (base64_output.value != '') {
+        encode(base64_output.value);
+    }
 })

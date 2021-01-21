@@ -4,15 +4,15 @@
     <title>New Calculator</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
 </head>
-<body>
+<body class="preload">
     <p>Доступные калькуляторы/переводчики:</p>
     <div class="main">
         <a href="../base64/index.html" style="margin-top:20px">
             <div class="card">
                 <h2 style="text-align:center;">BASE64 to<br>Win-1251</h2>
-                <p>Это можно использовать вместо перевода вручную в блокноте. Раскладывает решение на действия. Не совсем корректно работают некоторые странные символы (как 161 или 165), но
+                <p>Это можно использовать вместо перевода вручную в блокноте. Раскладывает решение на действия. Не совсем корректно работают некоторые символы (как 161 или 165), но
                     английские/русские буквы, цифры и знаки препинания работают правильно.
                 </p>
             </div>
@@ -21,15 +21,15 @@
             <div class="card">
                 <h2 style="text-align:center;">Elias Gamma Code</h2>
                 <p>Это можно использовать вместо перевода вручную в блокноте. Раскладывает решение на действия. Не уверен, что на 100% всё идеально, так как это неизведанный Эллиас.<br>
-                    <span style="color: rgb(255, 159, 159);">На данный момент перевод в обратную сторону (ну или кодирование) закончено не полностью, так как я очень ленивый. вооот.</span>
+                    <span style="color: rgb(226, 84, 84);">На данный момент перевод в обратную сторону (ну или кодирование) закончено не полностью, так как я очень ленивый. вооот.</span>
                 </p>
             </div>
         </a>
         <a href="../ascii/index.html" style="margin-top:20px">
             <div class="card">
                 <h2 style="text-align:center;">ASCII</h2>
-                <p>Это можно использовать вместо перевода вручную с таблицей. Вроде как работает правильно, надеюсь так дальше и будет. Так же как и с <span style="color: rgb(98, 185, 255);">BASE64 to Win-1251</span>
-                    не совсем корректно работают некоторые странные символы.
+                <p>Это можно использовать вместо перевода вручную с таблицей. Вроде как работает правильно, надеюсь так дальше и будет. Так же как и с <span style="color: rgb(78, 151, 211);">BASE64 to Win-1251</span>
+                    не совсем корректно работают некоторые символы.
                 </p>
             </div>
         </a>
@@ -50,10 +50,22 @@
         <a href="../autospace/index.html" style="margin-top:20px">
             <div class="card">
                 <h2 style="text-align:center;">Авто пробелы</h2>
-                <p>Чтобы делить текст на пробелы каждые 4, 6, 8, 11, 15 символов.
+                <p>Просто делит текст пробелами по <b>k</b> символов.
+                </p>
+            </div>
+        </a>
+        <a href="../sibirsky/index.html" style="margin-top:20px">
+            <div class="card">
+                <h2 style="text-align:center;">Сибирский</h2>
+                <p>Пока работает только обычный Сибирский, вместо разделительных пробелов ставить знак |.
                 </p>
             </div>
         </a>
     </div>
+    <script>
+        window.onload = function() {
+            document.body.classList.remove("preload");
+        }
+    </script>
 </body>
 </html>

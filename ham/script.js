@@ -25,20 +25,20 @@ function ham(str) {
             splitted_str[i] = 0;
         }
         if (splitted_str[i] == 1) {
-            splitted_str_colour[i] = 50;
+            splitted_str_colour[i] = 220;
         } else {
-            splitted_str_colour[i] = 30;
+            splitted_str_colour[i] = 255;
         }
     }
     table_nums.innerHTML = `
-        <th style="background-color:rgb(13, 71, 27);">${splitted_str[0]}</th>
-        <th style="background-color:rgb(13, 71, 27);">${splitted_str[1]}</th>
+        <th style="background-color:rgb(43, 43, 43); color:white;;">${splitted_str[0]}</th>
+        <th style="background-color:rgb(43, 43, 43); color:white;;">${splitted_str[1]}</th>
         <th style="background-color:rgb(${splitted_str_colour[2]}, ${splitted_str_colour[2]}, ${splitted_str_colour[2]});">${splitted_str[2]}</th>
-        <th style="background-color:rgb(13, 71, 27);">${splitted_str[3]}</th>
+        <th style="background-color:rgb(43, 43, 43); color:white;;">${splitted_str[3]}</th>
         <th style="background-color:rgb(${splitted_str_colour[4]}, ${splitted_str_colour[4]}, ${splitted_str_colour[4]});">${splitted_str[4]}</th>
         <th style="background-color:rgb(${splitted_str_colour[5]}, ${splitted_str_colour[5]}, ${splitted_str_colour[5]});">${splitted_str[5]}</th>
         <th style="background-color:rgb(${splitted_str_colour[6]}, ${splitted_str_colour[6]}, ${splitted_str_colour[6]});">${splitted_str[6]}</th>
-        <th style="background-color:rgb(13, 71, 27);">${splitted_str[7]}</th>
+        <th style="background-color:rgb(43, 43, 43); color:white;;">${splitted_str[7]}</th>
         <th style="background-color:rgb(${splitted_str_colour[8]}, ${splitted_str_colour[8]}, ${splitted_str_colour[8]});">${splitted_str[8]}</th>
         <th style="background-color:rgb(${splitted_str_colour[9]}, ${splitted_str_colour[9]}, ${splitted_str_colour[9]});">${splitted_str[9]}</th>
         <th style="background-color:rgb(${splitted_str_colour[10]}, ${splitted_str_colour[10]}, ${splitted_str_colour[10]});">${splitted_str[10]}</th>
