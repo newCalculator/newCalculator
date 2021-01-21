@@ -62,7 +62,7 @@ a {
     text-decoration:none;
 }
 a:visited {
-    color: inherit;
+    color:rgb(59, 59, 59);
 }
 a:active {
     color:rgb(211, 211, 211);
